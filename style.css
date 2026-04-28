@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Background */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #0f0f1a, #1a0033);
+  z-index: -2;
+  transition: 0.5s;
+}
+
+/* Glow overlay */
+.background::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(155,92,255,0.3), transparent);
+}
+
+/* Main layout */
+.main {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Title */
+.title {
+  font-size: 48px;
+  background: linear-gradient(90deg, #9b5cff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Search box */
+.search-box {
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  padding: 14px;
+  width: 260px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #9b5cff, #00d4ff);
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 40px rgba(155,92,255,0.2);
+  animation: fadeIn 0.6s ease;
+}
+
+/* Inputs */
+.card input {
+  width: 80%;
+  padding: 12px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Button */
+.card button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #9b5cff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Trailer */
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+/* Results */
+.pass { color: #00ff9f; }
+.warn { color: #ffd000; }
+.fail { color: #ff4d4d; }
+
+.hidden {
+  display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.poster {
+  width: 220px;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0 0 25px rgba(155,92,255,0.6);
+  transition: 0.3s;
+}
+
+.poster:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GameScope Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="main">
+
+  <h1 class="title">🎮 GameScope Pro</h1>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input id="gameInput" placeholder="Search any game...">
+    <button onclick="searchGame()">Search</button>
+  </div>
+
+  <!-- Game Display -->
+  <div id="gameCard" class="card hidden"></div>
+
+  <!-- PC Checker -->
+  <div class="card">
+    <h2>Your PC Specs</h2>
+
+    <input id="cpu" placeholder="CPU (i5 / Ryzen 5)">
+    <input id="gpu" placeholder="GPU (GTX / RTX)">
+    <input id="ram" type="number" placeholder="RAM (GB)">
+
+    <button onclick="checkGame()">Check Compatibility</button>
+
+    <div id="result"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
